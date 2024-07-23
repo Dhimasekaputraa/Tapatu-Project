@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapatu Project</title>
+    <link rel="stylesheet", href="style.css">
+</head>
+<body>
+    <div class="head">
+        <h2>Konversi Kode Warna Resistor 4 Gelang Warna</h2>
+        <hr>
+        <h4>Deskripsi</h4>
+        <p>web ini tuh gunanaya buat cari tau nilai resistansi resistor dengan cara ngubah kode warna resistor ke bentuk angka. Jadi kalian ga perlu ngehafalin kode warna dan angkanya buat cari tau nilai dari resistor.</p>
+        <h4>Petunjuk Penggunaan</h4>
+        <p>Jadi kalian masukin input warna ke bagian kolom gelang warna, dari gelang satu sampai empat. Kalo udah, nanti klik tombol "Tolong konversiin dong". Nanti bakalan muncul nilai dari resistor yang kalian cari tau, gituuu. </p>
+        <h4>Tentang gelang warna resistor</h4>
+        <p>Gelang pertama dan kedua itu mewakili nilai ( Nilai apa? ya nilai aja gitu )<br>
+        Gelang ketiga mewakili nilai pengali, jadi nanti buat besaran pengganti nol itu ada di gelang ketiga.<br>
+        Gelang keempat itu mewakili nilai tolerasi, fungsi toleransi dari resistor itu buat cari tau batesan nilai resistor yang masih layak dipake atau engga ( buat cari tau resistor masih bagus atau engga, tesnya pake multimeter, engga bisa pake web ini ).</p>
+    </div>
+    <hr>
+    <div class="content">
+        <h4>Masukin kode warnanya</h4>
+        <form>
+            <label for="g1">Gelang Pertama</label>
+            <select id="g1">
+                <option value="0">Hitam (0)</option>
+                <option value="1">Coklat (1)</option>
+                <option value="2">Merah (2)</option>
+                <option value="3">Jingga (3)</option>
+                <option value="4">Kuning (4)</option>
+                <option value="5">Hijau (5)</option>
+                <option value="6">Biru (6)</option>
+                <option value="7">Ungu (7)</option>
+                <option value="8">Abu-abu (8)</option>
+                <option value="9">Putih (9)</option>
+            </select>
+            <br>
+            <label for="g2">Gelang Kedua</label>
+            <select id="g2">
+                <option value="0">Hitam (0)</option>
+                <option value="1">Coklat (1)</option>
+                <option value="2">Merah (2)</option>
+                <option value="3">Jingga (3)</option>
+                <option value="4">Kuning (4)</option>
+                <option value="5">Hijau (5)</option>
+                <option value="6">Biru (6)</option>
+                <option value="7">Ungu (7)</option>
+                <option value="8">Abu-abu (8)</option>
+                <option value="9">Putih (9)</option>
+            </select> 
+            <br>
+            <label for="g3">Gelang Ketiga</label>
+            <select id="g3">
+                <option value="1">Hitam (x1 Ω)</option>
+                <option value="10">Coklat (x10 Ω)</option>
+                <option value="100">Merah (x100 Ω)</option>
+                <option value="1000">Jingga (x1K Ω)</option>
+                <option value="10000">Kuning (x10K Ω)</option>
+                <option value="100000">Hijau (x100K Ω)</option>
+                <option value="1000000">Biru (x1M Ω)</option>
+                <option value="10000000">Ungu (x10M Ω)</option>
+                <option value="100000000">Abu-abu (x100M Ω)</option>
+                <option value="1000000000">Putih (x1G Ω)</option>
+                <option value="0.1">Emas (x0.1 Ω)</option>
+                <option value="0.01">Perak (x0.01 Ω)</option>
+            </select>    
+            <br>
+            <label for="g4">Gelang Keempat</label>
+            <select id="g4">
+                <option value="1%">Coklat (±1%)</option>
+                <option value="2%">Merah (±2%)</option>
+                <option value="0.5%">Hijau (±0.5%)</option>
+                <option value="0.25%">Biru (±0.25%)</option>
+                <option value="0.1%">Ungu (±0.1%)</option>
+                <option value="0.05%">Abu - abu (±0.05%)</option>
+                <option value="5%">Emas (±5%)</option>
+                <option value="10%">Perak (±10%)</option>
+            </select>
+            <br>
+            <button type="button", onclick="displayAttribute()">Tolong konversiin dong</button>    
+        </form>
+        <h4>Output</h4>
+        <p>Ini hasil konversi kode warna resistornya<p>
+            <div id="output"></div>
+    </div>
+    <hr>
+    <h4>Siapa yang bikin?</h4>
+    <p>Yang bikin web ini bisa dikepoin di <a href="https://www.instagram.com/dimscrft/?hl=id">sini</a>.</p>
+    <script src="script.js"></script>
+</body>
+</html>
